@@ -4,7 +4,7 @@ import App from './App.jsx'
 import {Login} from './login/login.jsx'
 import {Root,About,Personal,Home} from './home/home'
 import {createBrowserRouter, Route, RouterProvider, createRoutesFromElements} from "react-router-dom";
-// import "./index.css";
+import "./style/style.scss";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

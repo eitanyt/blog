@@ -1,0 +1,98 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.contaner {
+    padding: 10px;
+}
+
+.loginError {
+    height: 45px;
+    color: #ff5757;
+    font-size: medium;
+}
+
+button.to_coonect {
+    border: none;
+    width: 100%;
+    font-size: large;
+    padding: 4px 20px 6px 20px;
+    background-image: linear-gradient(to right,
+            rgb(89, 121, 180),
+            rgb(114, 208, 214));
+}
+
+.close {
+    padding: 0;
+    background: 0 0;
+    border: 0;
+    /* -webkit-appearance: none; */
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+header {
+    background-color: rgb(0, 114, 122);
+    color: rgb(255, 249, 216);
+    display: flex;
+    font-family: "Heebo";
+    height: 60px;
+
+    ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style-type: none;
+            height: 100%;
+
+            a:hover {
+                background-color: rgb(119, 233, 227);
+                border-style: solid none;
+                border-color: rgb(133, 133, 133);
+            }
+
+            a {
+                color: rgb(255, 252, 236);
+                text-decoration: none;
+                display: flex;
+                box-sizing: border-box;
+                width: 100px;
+                height: 100%;
+                text-align: center;
+                font-size: large;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s;
+            }
+
+            a.active {
+                background-color: rgb(42, 170, 164);
+                border-style: solid none;
+                border-color: rgb(133, 133, 133);
+            }
+        }
+    }
+
+
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button a {
+    background-color: rgb(197, 155, 101);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.childmane {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
