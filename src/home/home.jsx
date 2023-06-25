@@ -1,36 +1,9 @@
-import {useState } from "react";
-import { Outlet, Link, NavLink } from "react-router-dom";
-import { Header } from "./Header";
-
-function Root(params) {
-    
-  return (
-    <>
-    <Header />
-    <div className="childmane">
-      <Outlet />
-    </div>
-    <footer></footer>
-    </>
+export function Home(params) {
+    return(
+      <><div className="about"><h1>הבלוג הכי טוב</h1></div>
+      <div className="posts">
+  
+      </div>
+      </>
     )
-}
-
-function About(params) {
-  return(
-    <div>about</div>
-  )
-}
-function Home(params) {
-  return(
-    <div>Home</div>
-  )
-}
-function Personal(params) {
-  return(
-    <div>Personal</div>
-  )
-}
-
-
-
-export {Root,About,Home,Personal}
+  }

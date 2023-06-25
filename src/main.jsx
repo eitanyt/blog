@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import {Login} from './login/login.jsx'
-import {Root,About,Personal,Home} from './home/home'
+import {Root,About,Personal} from './home/Root.jsx'
+import {Home} from './home/Home.jsx'
 import {createBrowserRouter, Route, RouterProvider, createRoutesFromElements} from "react-router-dom";
 import "./style/style.scss";
 
