@@ -10,7 +10,6 @@ function Root(params) {
     <div className="childmane">
       <Outlet />
     </div>
-    <footer></footer>
     </>
     )
 }

@@ -6,12 +6,14 @@ export function Header(props) {
     return (
             <header dir="rtl" >
                 <ul>
-                <li ><NavLink to={'home'} className="menu">מסך הבית</NavLink></li>
+                <li ><NavLink to={'home'} className="menu">בלוג</NavLink></li>
                 <li ><NavLink to={'About'} className="menu" >אודות</NavLink></li>
                 <li ><NavLink to={'Personal'} className="menu">איזור אישי</NavLink></li>
                 </ul>
+                <div className="user-and-login">
                 {user&&<div>{ userName }</div>}
                 <div className="login-button"><Link to={'Login'}>התחברות</Link></div>
+                </div>
             </header>
     )
 }

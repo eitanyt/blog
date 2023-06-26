@@ -1,10 +1,17 @@
 .center {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .contaner {
     padding: 10px;
+}
+
+body{
+    background-color: beige;
+    padding: 0;
+    margin: 0;
 }
 
 .loginError {
@@ -40,6 +47,27 @@ header {
     font-family: "Heebo";
     height: 60px;
 
+    .user-and-login {
+        flex: auto;
+        display: flex;
+        justify-content: flex-end;
+
+        .login-button {
+            margin: 0 2rem;
+            display: flex;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: rgb(255, 252, 236);
+                background-color: rgb(197, 155, 101);
+                font-size: large;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
+    }
+
     ul {
         display: flex;
         padding: 0;
@@ -48,12 +76,6 @@ header {
         li {
             list-style-type: none;
             height: 100%;
-
-            a:hover {
-                background-color: rgb(119, 233, 227);
-                border-style: solid none;
-                border-color: rgb(133, 133, 133);
-            }
 
             a {
                 color: rgb(255, 252, 236);
@@ -67,12 +89,20 @@ header {
                 align-items: center;
                 justify-content: center;
                 transition: all 0.3s;
-            }
+                border-bottom-style: solid;
+                border-color: rgb(0, 114, 122);
+                border-width: 1vh;
 
-            a.active {
-                background-color: rgb(42, 170, 164);
-                border-style: solid none;
-                border-color: rgb(133, 133, 133);
+                &:hover {
+                    background-color: rgb(119, 233, 227);
+                    border-color: rgb(133, 133, 133);
+                }
+
+                &.active {
+                    background-color: rgb(42, 170, 164);
+                    border-bottom-style: solid;
+                    border-color: rgb(133, 133, 133);
+                }
             }
         }
     }
@@ -80,28 +110,38 @@ header {
 
 }
 
-.login-button {
-    display: flex;
-    align-items: center;
-}
+.childmane {
+    background-color: beige;
+    .home-img {
+        width: 100%;
+        height: 235px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-image: url(https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg);
+        background-size: 100%;
+        background-position: 50%;
 
-.login-button a {
-    background-color: rgb(197, 155, 101);
-    padding: 10px;
-    border-radius: 10px;
-}
+        h1 {
+            font-size: 4em;
+            padding-right: 20px;
+        }
+    }
 
-.about{
-    width: 100%;
-    height: 235px;
-    display: flex;
-    align-items: center ;
-    justify-content: flex-end;
-    background-image: url(https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg);
-    background-size:100%;
-    background-position: 50%;
-    h1{
-        font-size: 4em;
-        padding-right: 20px;
+    .shou-posts {
+        margin-left: 3vw;
+
+        .post {
+            background-color: rgb(179, 213, 230);
+            height: 50vh;
+            border-radius: 10px;
+            margin-top: 15px;
+            padding: 15px;
+
+            h1 {
+                font-size: 20px;
+                margin: 0;
+            }
+        }
     }
 }
