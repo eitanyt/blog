@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PostTitle from "./postTitle";
 
 export function ShowPosts({ tag, page }) {
     const [data, setData] = useState([]);
@@ -29,9 +30,11 @@ export function ShowPosts({ tag, page }) {
     return (
         <div className="shou-posts">
             {data ? data.map((post, index) => (
-                <article key={index} className="post">
-                    <h1>{post.title}</h1>
-                </article>
+                <PostTitle post={post} key={index} />
+                //     <h1>{post.title}</h1>
+                //     <p>{post.body}</p>
+                //     <a href="">לכל הפוסטים של  הכותב</a>
+                // </article>
             )
             ) : null}
         </div>

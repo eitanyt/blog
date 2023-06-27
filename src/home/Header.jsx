@@ -6,13 +6,13 @@ export function Header(props) {
     return (
             <header dir="rtl" >
                 <ul>
-                <li ><NavLink to={'home'} className="menu">בלוג</NavLink></li>
-                <li ><NavLink to={'About'} className="menu" >אודות</NavLink></li>
-                <li ><NavLink to={'Personal'} className="menu">איזור אישי</NavLink></li>
+                <li ><NavLink to={'home'} className="menu center" >בלוג</NavLink></li>
+                <li ><NavLink to={'About'} className="menu center" >אודות</NavLink></li>
+                <li ><NavLink to={'Personal'} className="menu center">איזור אישי</NavLink></li>
                 </ul>
                 <div className="user-and-login">
                 {user&&<div>{ userName }</div>}
-                <div className="login-button"><Link to={'Login'}>התחברות</Link></div>
+                <div className="login-button center"><Link to={'Login'}>התחברות</Link></div>
                 </div>
             </header>
     )
