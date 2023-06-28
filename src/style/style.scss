@@ -9,6 +9,7 @@
 }
 
 body{
+    font-family: "Heebo";
     background-color: beige;
     padding: 0;
     margin: 0;
@@ -106,6 +107,7 @@ header {
 
 .childmane {
     background-color: beige;
+    padding: 25px;
     .home-img {
         width: 100%;
         height: 235px;
@@ -124,6 +126,7 @@ header {
 
     .shou-posts {
         margin-left: 3vw;
+        transition: all 1s;
 
         .post {
             background-color: rgb(179, 213, 230);
@@ -131,6 +134,7 @@ header {
             border-radius: 10px;
             margin-top: 15px;
             padding: 20px;
+            transition: all 1s;
             a{
                 text-decoration: none;
                 display: block;
@@ -142,6 +146,27 @@ header {
                 font-size: 25px;
                 margin: 0;
             }
+        }
+    }
+}
+$bac-post : #c9d0eb;
+.postComponet{
+    width: 400px;
+    padding: 20px;
+    background-color: $bac-post;
+    border-radius: 15px;
+    border: 5px solid #719799;
+    .post{
+        background-color: lighten($bac-post,2);
+        // border: 1px solid #719799;  
+    }
+    &>p{
+        background-color: lighten($bac-post,2);
+        // border: 1px solid #719799;  
+        padding: 10px;
+        span{
+            display: block;
+            font-size: small;
         }
     }
 }

@@ -5,6 +5,7 @@ import {Root,About,Personal} from './home/Root.jsx'
 import {Home} from './home/Home.jsx'
 import {createBrowserRouter, Route, RouterProvider, createRoutesFromElements} from "react-router-dom";
 import "./style/style.scss";
+import Post from './home/Post.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,7 +16,7 @@ const router = createBrowserRouter(
     <Route path = "home" element={<Home/>}/>
     <Route path = "Personal" element={<Personal/>}/>
     <Route path = "Login" element={<Login/>}/>
-    {/* <Route path = "posts/:postId" element={<Post/>}/> */}
+    <Route path = "posts/:postId" element={<Post/>}/>
   </Route>
   
   )
