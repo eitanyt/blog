@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import PostTitle from "./postTitle";
 
-export function getPosts(request,setData) {
+export function getdata(request,setData) {
     const controller = new AbortController();
     const signal = controller.signal;
     fetch(request, { signal })
@@ -18,7 +18,7 @@ export function ShowPosts({ tag, page }) {
 
     useEffect(function () {
         const url = tag ? `https://dummyjson.com/posts/search?tags=${tag}` : `https://dummyjson.com/posts?skip=${page}&limit=10`
-        const abort = getPosts(url,setData)
+        const abort = getdata(url,res => setData(res.posts))
 
         return function cancel() {
             abort()
@@ -30,7 +30,7 @@ export function ShowPosts({ tag, page }) {
 
     return (
         <div className="shou-posts">
-            {data.posts && data.posts.map((post, index) => (
+            {data && data.map((post, index) => (
                 <PostTitle post={post} key={index} />
             )
             )}
