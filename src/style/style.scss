@@ -8,7 +8,7 @@
     padding: 10px;
 }
 
-body{
+body {
     font-family: "Heebo";
     background-color: beige;
     padding: 0;
@@ -47,6 +47,8 @@ header {
     display: flex;
     font-family: "Heebo";
     height: 60px;
+    position: sticky;
+    top: 0;
 
     .user-and-login {
         flex: auto;
@@ -55,7 +57,7 @@ header {
 
         .login-button {
             margin: 0 2rem;
-            
+
             a {
                 text-decoration: none;
                 color: rgb(255, 252, 236);
@@ -106,8 +108,13 @@ header {
 }
 
 .childmane {
-    background-color: beige;
-    padding: 25px;
+    background-color: rgb(0, 54, 54);
+   
+    .posts{
+        display: flex;
+
+    }
+    // padding: 25px;
     .home-img {
         width: 100%;
         height: 235px;
@@ -116,7 +123,8 @@ header {
         justify-content: flex-end;
         background-image: url(https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg);
         background-size: 100%;
-        background-position: 50%;
+        background-position: 25% 50%;
+        background-repeat: no-repeat;
 
         h1 {
             font-size: 4em;
@@ -128,14 +136,22 @@ header {
         margin-left: 3vw;
         transition: all 1s;
 
-        .post {
-            background-color: rgb(179, 213, 230);
-            height: 20vh;
+        .post-title {
+            background-color: rgba(179, 213, 230, 0.7);
+            min-height: 10vh;
             border-radius: 10px;
             margin-top: 15px;
             padding: 20px;
             transition: all 1s;
-            a{
+            max-width: 500px;
+
+            &:hover {
+                background-color: rgba(179, 213, 230, 1);
+                box-shadow: 5px;
+            }
+
+            a {
+                color: aliceblue;
                 text-decoration: none;
                 display: block;
                 width: 100%;
@@ -149,24 +165,73 @@ header {
         }
     }
 }
+
 $bac-post : #c9d0eb;
-.postComponet{
+
+.postComponet {
     width: 400px;
     padding: 20px;
     background-color: $bac-post;
     border-radius: 15px;
     border: 5px solid #719799;
-    .post{
-        background-color: lighten($bac-post,2);
+
+    .post {
+        background-color: lighten($bac-post, 2);
         // border: 1px solid #719799;  
     }
-    &>p{
-        background-color: lighten($bac-post,2);
+
+    &>p {
+        background-color: lighten($bac-post, 2);
         // border: 1px solid #719799;  
         padding: 10px;
-        span{
+
+        span {
             display: block;
             font-size: small;
+        }
+    }
+}
+
+.ChangePage {
+    display: flex;
+    gap: 30PX;
+    padding: 20px 0;
+
+    button {
+        font-family: "Heebo";
+        // display: inline-block;
+        width: 100PX;
+        height: 50px;
+        padding: 0;
+        // background-color: #077770;
+        background-color: rgba(54, 25, 25, .00004);
+        border-radius: 49px 200px 66px 111px;
+        border: none;
+        font-weight: 600;
+        font-size: medium;
+        color: white;
+
+        &:hover {
+            background-color: rgb(119, 233, 227);
+            border-color: rgb(133, 133, 133);
+        }
+
+        &.previous {
+            border-radius: 200px 49px 111px 66px;
+        }
+    }
+
+    .namber-page {
+        display: inline-block;
+        // padding: 10px 15px;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: #ffffff;
+        // background-color: #4aa0af;
+        border-radius: 50%;
+
+        &:hover {
+            border-color: rgb(133, 133, 133);
         }
     }
 }

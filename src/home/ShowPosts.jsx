@@ -15,9 +15,8 @@ export function ShowPosts({ tag, page }) {
     const [data, setData] = useState([]);
 
 
-
     useEffect(function () {
-        const url = tag ? `https://dummyjson.com/posts/search?tags=${tag}` : `https://dummyjson.com/posts?skip=${page}&limit=10`
+        const url = tag ? `https://dummyjson.com/posts/search?tags=${tag}` : `https://dummyjson.com/posts?skip=${page*10}&limit=10`
         const abort = getdata(url,res => setData(res.posts))
 
         return function cancel() {
@@ -31,7 +30,7 @@ export function ShowPosts({ tag, page }) {
     return (
         <div className="shou-posts">
             {data && data.map((post, index) => (
-                <PostTitle post={post} key={index} />
+                <PostTitle post={post} key={post.id} />
             )
             )}
         </div>

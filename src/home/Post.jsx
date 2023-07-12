@@ -16,16 +16,17 @@ export default function Post(props) {
         return () => {
             abort()
         }
-    }, [])
+    }, [postId])
 
     return (
         <div className="postComponet">
             <article className="post">
+                {/* <p>{state}</p> */}
                 <h1>{state.title}</h1>
                 <p>{state.body}</p>
             </article>
             {data && data.map((comment, index) => {
-                return (<><p key={index}><span>{comment.user.username}</span>{comment.body}</p></>
+                return (<><p key={comment.id}><span>{comment.user.username}</span>{comment.body}</p></>
                 )
             })}
         </div>
