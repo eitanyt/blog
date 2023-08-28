@@ -13,16 +13,14 @@ export function getdata(request,setData) {
 
 export function ShowPosts({ tag, page }) {
     const [data, setData] = useState([]);
+    const url = tag ? `https://dummyjson.com/posts/search?tags=${tag}` : `https://dummyjson.com/posts?skip=${page*10}&limit=10`
 
 
     useEffect(function () {
-        const url = tag ? `https://dummyjson.com/posts/search?tags=${tag}` : `https://dummyjson.com/posts?skip=${page*10}&limit=10`
+        
         const abort = getdata(url,res => setData(res.posts))
 
-        return function cancel() {
-            abort()
-            // setData(null);
-        }
+        return () => abort()
     }, [tag, page]);
     
     console.log(data);
@@ -30,6 +28,7 @@ export function ShowPosts({ tag, page }) {
     return (
         <div className="shou-posts">
             {data && data.map((post, index) => (
+                // <PostTitle post={post} key={post.id} />
                 <PostTitle post={post} key={post.id} />
             )
             )}

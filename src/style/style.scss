@@ -109,11 +109,14 @@ header {
 
 .childmane {
     background-color: rgb(0, 54, 54);
-   
-    .posts{
+}
+
+.homeComponent {
+    .posts {
         display: flex;
 
     }
+
     // padding: 25px;
     .home-img {
         width: 100%;

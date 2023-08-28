@@ -1,15 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import { Header } from "./Header";
 
 function Root(params) {
-
+  
   return (
     <>
       <Header />
-      <div className="childmane">
-        <Outlet />
+      <div className="childmane homeComponent">
+      <div className="home-img">
+        <h1>אל תבזבז את זמנך</h1>
       </div>
+      <Outlet />
+      {/* <Outlet context={[data, setData]} /> */}
+    </div>
       <div style={{
         fontSize: 40, position: 'fixed',
         top: '65px',

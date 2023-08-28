@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { getdata } from "./ShowPosts";
 
 
@@ -8,6 +8,11 @@ export default function Post(props) {
     const { postId } = useParams()
     const { state } = useLocation();
     const [data, setData] = useState(null)
+    const navigate = useNavigate();
+	
+    const goBack = () => {
+		navigate(-1);
+	}
 
     
     useEffect(function (params) {
@@ -20,6 +25,7 @@ export default function Post(props) {
 
     return (
         <div className="postComponet">
+            <button onClick={goBack}>Back</button>
             <article className="post">
                 {/* <p>{state}</p> */}
                 <h1>{state.title}</h1>
